@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>新能源充电桩大数据分析平台</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="apple-shell">
+      <header class="apple-nav">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark">EV</span>
+          <span>
+            <strong>充电桩大数据</strong>
+            <small>Clean Analytics OS</small>
+          </span>
+        </a>
+        <nav id="sectionNav" class="nav" aria-label="分析模块导航"></nav>
+        <div class="nav-status">
+          <span id="progressText">读取中</span>
+          <div class="progress-track" aria-hidden="true"><i id="progressBar"></i></div>
+        </div>
+      </header>
+
+      <main id="top" class="workspace">
+        <section class="hero-summary">
+          <div class="hero-copy">
+            <p class="eyebrow">Python / Flask / Pandas / SVG</p>
+            <h1>新能源充电桩大数据分析平台</h1>
+            <p class="hero-lede">
+              将课程要求中的充电频率、SOC趋势、时长分布、速率分析、性能报告与历史数据估算整合成一套清爽、可验收、可演示的数据分析界面。
+            </p>
+          </div>
+          <aside class="progress-card" aria-label="项目进度">
+            <span>项目进度</span>
+            <strong>10 / 10</strong>
+            <p>功能模块已接入，安全头与本地化前端资源已配置。</p>
+          </aside>
+        </section>
+
+        <section id="summary" class="metrics" aria-label="核心指标"></section>
+
+        <section id="time_frequency" class="focus-panel">
+          <div class="section-head">
+            <div>
+              <p>核心趋势</p>
+              <h2>充电时间与次数频率分析</h2>
+            </div>
+            <span>Pandas 聚合统计</span>
+          </div>
+          <div id="frequencyChart" class="chart chart-large"></div>
+        </section>
+
+        <section class="insight-stack" aria-label="深度分析">
+          <article id="hourly_soc" class="panel panel-soft">
+            <div class="section-head">
+              <div>
+                <p>电池状态</p>
+                <h2>每小时电池平均 SOC</h2>
+              </div>
+            </div>
+            <div id="socChart" class="chart"></div>
+          </article>
+
+          <article id="time_distribution" class="panel">
+            <div class="section-head">
+              <div>
+                <p>时长结构</p>
+                <h2>充电时间分布</h2>
+              </div>
+            </div>
+            <div id="distributionChart" class="chart"></div>
+          </article>
+
+          <article id="avg_speed" class="panel panel-wide">
+            <div class="section-head">
+              <div>
+                <p>效率表现</p>
+                <h2>平均充电速率分析</h2>
+              </div>
+              <span>kWh / h</span>
+            </div>
+            <div id="speedChart" class="chart"></div>
+          </article>
+        </section>
+
+        <section class="delivery-grid" aria-label="项目验收">
+          <article id="performance_report" class="panel">
+            <div class="section-head">
+              <div>
+                <p>报告</p>
+                <h2>性能指标分类分析</h2>
+              </div>
+            </div>
+            <div id="performanceList" class="report-list"></div>
+          </article>
+
+          <article id="prediction" class="panel">
+            <div class="section-head">
+              <div>
+                <p>估算</p>
+                <h2>历史数据估算示例</h2>
+              </div>
+            </div>
+            <div id="predictionCards" class="prediction-grid"></div>
+          </article>
+
+          <article id="requirements" class="panel">
+            <div class="section-head">
+              <div>
+                <p>验收矩阵</p>
+                <h2>课程要求覆盖情况</h2>
+              </div>
+            </div>
+            <div id="requirementsList" class="coverage-list"></div>
+          </article>
+
+          <article id="mapreduce" class="panel">
+            <div class="section-head">
+              <div>
+                <p>统计口径演示</p>
+                <h2>课程聚合口径示例</h2>
+              </div>
+            </div>
+            <div id="mapreduceJobs" class="job-list"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
