@@ -161,6 +161,7 @@ function renderDonut(id, items) {
       cx: 140,
       cy: 130,
       r: 72,
+      pathLength: 100,
       fill: "none",
       stroke: colors[index],
       "stroke-width": 28,
